@@ -49,7 +49,7 @@ def propogate(w,b,x,y):
 def optimize(w,b,x,y,num_iterations,learning_rate,print_cost = False):
     cost = []
 
-    for i in renge(num_iterations):
+    for i in range(num_iterations):
         grads,cost = propogate(w,b,x,y)
 
         dw = grads["dw"]
