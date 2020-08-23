@@ -2,18 +2,21 @@ import yfinance as yf
 import numpy as np
 import random
 
-stock = yf.Ticker(input("Stock Code : "))
-history = stock.history(period = "max")
+def CallStock():
+    stock = yf.Ticker(input("Stock Code : "))
+    history = stock.history(period = "max")
 
-stock_prices = []
-stock_index = []
+    stock_prices = []
+    stock_index = []
 
 
-for i in history["Close"]:
-    stock_prices.append(int(i))
+    for i in history["Close"]:
+        stock_prices.append(int(i))
 
-for i in range(1,len(stock_prices) + 1):
-    stock_index.append(i)
+    for i in range(1,len(stock_prices) + 1):
+        stock_index.append(i)
+    
+    return stock_prices, stock_index
 
 #building my own neural network cause why not
 
