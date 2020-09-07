@@ -18,7 +18,7 @@ def CallStock():
     
     return stock_prices, stock_index
 
-#building my own neural network cause why not
+#Building my own neural network cause why not
 
 def sigmoid(z):
     return 1/(1 + np.exp(-z))
